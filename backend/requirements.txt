@@ -1,0 +1,16 @@
+# Web Framework
+fastapi==0.110.0
+uvicorn==0.27.1
+
+# AI Orchestration
+langchain==0.2.1
+langchain-core==0.2.3
+
+# AI Providers
+langchain-openai==0.1.7      # For Azure OpenAI
+langchain-ollama==0.1.0      # For Local Ollama
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.6.3
+requests==2.31.0

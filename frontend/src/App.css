@@ -1,0 +1,89 @@
+/* Currys Brand Palette */
+:root {
+  --currys-navy: #00005d;
+  --currys-magenta: #e5007d;
+  --currys-purple: #6c2d91;
+  --bg-light: #f4f4f7;
+  --text-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header Styling */
+.header {
+  background: var(--currys-navy);
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card Layouts */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+select, button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--currys-magenta);
+  color: white;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+}
+
+/* Result Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.spec-item {
+  background: #f9f9fb;
+  padding: 10px;
+  border-left: 4px solid var(--currys-purple);
+  border-radius: 4px;
+}

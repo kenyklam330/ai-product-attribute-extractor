@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Python FastAPI Backend
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    networks:
+      - currys-network
+
+  # React Frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    networks:
+      - currys-network
+    depends_on:
+      - backend
+
+networks:
+  currys-network:
+    driver: bridge
